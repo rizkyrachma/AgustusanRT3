@@ -4,6 +4,7 @@ import User from "../models/User";
 import Committee from "../models/Committee";
 import Category from "../models/Category";
 import Transaction from "../models/Transaction";
+import Competition from "../models/Competition";
 import * as dotenv from "dotenv";
 
 // Load environment variables
@@ -26,6 +27,7 @@ async function main() {
     await Committee.deleteMany({});
     await Category.deleteMany({});
     await Transaction.deleteMany({});
+    await Competition.deleteMany({});
 
     // 1. Create Admin User
     console.log("Creating admin user...");
@@ -149,6 +151,26 @@ async function main() {
         userId: admin._id,
         categoryId: getCategoryId("Konsumsi"),
       },
+    ]);
+
+    // 5. Create Competitions
+    console.log("Creating competitions...");
+    await Competition.insertMany([
+      {
+        name: "Lomba Balap Karung",
+        description: "Lomba tradisional balap karung menggunakan helm. Khusus anak-anak RT3.",
+        image: "",
+      },
+      {
+        name: "Panjat Pinang",
+        description: "Panjat pinang berhadiah utama sepeda gunung. Pendaftaran per tim (5 orang).",
+        image: "",
+      },
+      {
+        name: "Lomba Makan Kerupuk",
+        description: "Peserta harus menghabiskan kerupuk yang digantung secepat mungkin tanpa menggunakan tangan.",
+        image: "",
+      }
     ]);
 
     console.log("Seeding complete!");

@@ -10,6 +10,7 @@ import {
   ArrowUpCircle,
   Tags,
   Users,
+  Trophy,
   LogOut,
   Menu,
 } from "lucide-react";
@@ -21,6 +22,7 @@ const sidebarLinks = [
   { name: "Pengeluaran", href: "/admin/pengeluaran", icon: ArrowUpCircle },
   { name: "Kategori", href: "/admin/kategori", icon: Tags },
   { name: "Panitia", href: "/admin/panitia", icon: Users },
+  { name: "Daftar Lomba", href: "/admin/lomba", icon: Trophy },
 ];
 
 export default function AdminLayout({ children }: { children: ReactNode }) {
