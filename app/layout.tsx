@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Kas Agustusan RT3",
-  description: "Aplikasi pencatatan kas panitia Kemerdekaan Indonesia ke-80 RT3",
+  description: "Aplikasi pencatatan kas panitia Kemerdekaan Indonesia ke-81 RT3",
 };
 
 export default function RootLayout({

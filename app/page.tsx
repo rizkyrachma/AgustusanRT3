@@ -126,7 +126,7 @@ export default async function Home() {
 
                 {/* Subtitle */}
                 <p className="text-[14px] md:text-[16px] text-white/70 font-medium tracking-[0.05em] mb-8">
-                  HUT RI Ke-80 &middot; 17 Agustus 2025
+                  HUT RI Ke-81 &middot; 17 Agustus 2026
                 </p>
               </div>
             </FadeIn>
@@ -252,11 +252,11 @@ export default async function Home() {
         <div className="h-[1px] w-full bg-[#E5E7EB] mb-8" />
         <FadeIn delay={100} direction="none">
           <div className="text-center flex justify-center items-center gap-2">
-            <span className="text-[11px] uppercase tracking-[0.08em] text-[#9CA3AF] font-medium">HUT RI Ke-80</span>
+            <span className="text-[11px] uppercase tracking-[0.08em] text-[#9CA3AF] font-medium">HUT RI Ke-81</span>
             <span className="text-[#B91C1C] text-[11px]">&bull;</span>
             <span className="text-[11px] uppercase tracking-[0.08em] text-[#9CA3AF] font-medium">RT 3</span>
             <span className="text-[#B91C1C] text-[11px]">&bull;</span>
-            <span className="text-[11px] uppercase tracking-[0.08em] text-[#9CA3AF] font-medium">2025</span>
+            <span className="text-[11px] uppercase tracking-[0.08em] text-[#9CA3AF] font-medium">2026</span>
           </div>
         </FadeIn>
       </footer>
