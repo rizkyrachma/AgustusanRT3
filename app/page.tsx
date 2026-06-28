@@ -12,6 +12,7 @@ import LombaCarousel from "@/components/LombaCarousel";
 import Typewriter from "@/components/Typewriter";
 import ShinyText from "@/components/ShinyText";
 import OrgChart from "@/components/OrgChart";
+import Navbar from "@/components/Navbar";
 
 // Make sure to configure the Next.js cache properly for this route
 export const revalidate = 60; // Revalidate every 60 seconds
@@ -69,38 +70,17 @@ export default async function Home() {
       {/* 1. Flag bar */}
       <div className="h-[4px] w-full bg-gradient-to-r from-[#B91C1C] from-50% to-white to-50%" />
 
-      {/* 2. Top navigation bar */}
-      <header className="bg-[#B91C1C] border-b-[3px] border-[#FFD700] h-[60px] px-8 flex items-center justify-between sticky top-0 z-50">
-        <span className="font-playfair font-bold text-[17px] text-white">
-          Kas Agustusan RT3
-        </span>
-        <div className="flex items-center gap-6">
-          <Link href="/" className="text-[13px] text-[#FFD700] font-medium hover:text-yellow-200 hover:scale-110 active:scale-95 transition-all duration-200 inline-block">
-            Beranda
-          </Link>
-          <Link href="#lomba" className="text-[13px] text-[#FFD700] font-medium hover:text-yellow-200 hover:scale-110 active:scale-95 transition-all duration-200 inline-block">
-            Daftar Lomba
-          </Link>
-          <Link href="#panitia" className="text-[13px] text-[#FFD700] font-medium hover:text-yellow-200 hover:scale-110 active:scale-95 transition-all duration-200 inline-block">
-            Panitia
-          </Link>
-          <Link href="#rekap" className="text-[13px] text-[#FFD700] font-medium hover:text-yellow-200 hover:scale-110 active:scale-95 transition-all duration-200 inline-block">
-            Rekap Kas
-          </Link>
-          <Link href="/login" className="text-[13px] text-[#FFD700] font-medium hover:text-yellow-200 hover:scale-110 active:scale-95 transition-all duration-200 inline-block">
-            Masuk
-          </Link>
-        </div>
-      </header>
+      {/* 1. Header Navigation */}
+      <Navbar />
 
       <main className="flex-grow flex flex-col">
         {/* 3. Hero section */}
         <section className="bg-[#7F1D1D] min-h-[calc(100vh-64px)] flex flex-col items-center px-8 text-center pt-16 pb-12 relative overflow-hidden">
-          
+
           {/* Ribbons Background */}
           <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
             <Ribbons
-              colors={["#ff002c","#ffffff"]}
+              colors={["#ff002c", "#ffffff"]}
               baseSpring={0.03}
               baseFriction={0.9}
               baseThickness={30}
@@ -131,15 +111,15 @@ export default async function Home() {
                 </div>
 
                 {/* Main title */}
-                <h1 
+                <h1
                   className="font-playfair text-[50px] md:text-[72px] font-bold leading-[1.1] mb-4"
                   style={{ textShadow: '0 0 20px rgba(255,255,255,0.2), 0 0 40px rgba(255,215,0,0.3)' }}
                 >
-                  <ShinyText 
-                    text="Agustusan RT 3" 
-                    color="#ffffff" 
-                    shineColor="#FFD700" 
-                    speed={3} 
+                  <ShinyText
+                    text="Agustusan RT 3"
+                    color="#ffffff"
+                    shineColor="#FFD700"
+                    speed={3}
                     className="font-playfair pb-2"
                   />
                 </h1>
@@ -151,10 +131,10 @@ export default async function Home() {
               </div>
             </FadeIn>
           </div>
-          
+
           <div className="mt-auto pt-8">
             <FadeIn delay={500} direction="up">
-              <Link href="#lomba" className="flex flex-col items-center group cursor-pointer pointer-events-auto">
+              <Link href="#lomba" className="flex flex-col items-center group cursor-pointer pointer-events-auto hover:scale-110 active:scale-95 transition-all duration-200">
                 <span className="text-[11px] text-white/60 mb-2 group-hover:text-[#FFD700] transition-colors uppercase tracking-widest">Daftar Lomba</span>
                 <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#FFD700] transition-all animate-bounce">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/60 group-hover:text-[#FFD700]">
